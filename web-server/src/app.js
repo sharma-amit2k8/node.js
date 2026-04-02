@@ -5,7 +5,7 @@ import hbs from 'hbs'
 import { getForecast } from './utils/forecast.js'
 
 const app = express()
-
+const port = process.env.port || 1200
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const viewspath = path.join(__dirname, '../templates/views')
@@ -92,8 +92,8 @@ app.get('{/*path}', (req,res) => {
 
 
 
-app.listen('1200', ()=> {
-    console.log('App Server started')
+app.listen(port , ()=> {
+    console.log('App Server started on ' + port)
 }
 )
 
