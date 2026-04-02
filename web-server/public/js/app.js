@@ -26,6 +26,6 @@ fetch('https://api.weatherstack.com/current?access_key=0683370f14c91d912b3a115e4
     })
 })
 } else {
-    console.log('Entr address')
+    msg1.textContent = 'Entr address'
 }
 })
