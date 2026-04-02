@@ -21,7 +21,7 @@ fetch('/weather?address=' + search.value).then((response) => {
         else{
             // msg1.textContent = data.location.name + ' : '  + data.current.temperature
             msg1.textContent = data.address + ' : '  + data.temp
-            msg2.textContent = ''
+            msg2.textContent = 'feels Like : ' + data.feelslike 
             // console.log(data.address, ' : ' ,data.temp)
         }  
         
@@ -29,5 +29,6 @@ fetch('/weather?address=' + search.value).then((response) => {
 })
 } else {
     msg1.textContent = 'Entr address'
+    msg2.textContent = ''
 }
 })
